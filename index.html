@@ -12,28 +12,26 @@
         }
 
         :root {
-            /* 🧁 Palette 2: Pastel Pop */
-            --pastel-yellow: #FDFD96;
-            --cotton-candy-pink: #FFB7CE;
-            --mint-green: #B6E2D3;
-            --lavender: #C3B1E1;
-            --sky-blue: #AEDFF7;
-            --text-dark: #5C5470; /* A darker shade for readability */
-            --text-light: #FAF3F3;
+            /* 🌙 Moody Twilight Palette */
+            --midnight-navy: #1E1F3F;
+            --dusty-blue: #586F7C;
+            --deep-lilac: #7B6D8D;
+            --moon-silver: #D6D6D6;
+            --soft-white: #F5F5F5;
             
-            /* Stronger border colors for contrast */
-            --lavender-dark: #A990C8;
-            --mint-green-dark: #8EBEAE;
-            --cotton-candy-pink-dark: #E5A0B8;
-            --sky-blue-dark: #92C5DE;
-            --pastel-yellow-dark: #E0E086;
+            /* Semantic mapping */
+            --bg-primary: var(--midnight-navy);
+            --bg-secondary: var(--dusty-blue);
+            --accent-primary: var(--deep-lilac);
+            --text-primary: var(--soft-white);
+            --text-secondary: var(--moon-silver);
         }
 
         body {
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--lavender) 100%);
+            color: var(--text-primary);
+            background: var(--bg-primary);
             overflow-x: hidden;
         }
 
@@ -45,7 +43,7 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, var(--cotton-candy-pink) 0%, var(--pastel-yellow) 100%);
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--accent-primary) 100%);
             padding: 80px 0;
             text-align: center;
             position: relative;
@@ -58,7 +56,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23B6E2D3" opacity="0.5"/><circle cx="80" cy="40" r="3" fill="%23AEDFF7" opacity="0.6"/><circle cx="60" cy="80" r="2" fill="%23FDFD96" opacity="0.5"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%237B6D8D" opacity="0.3"/><circle cx="80" cy="40" r="3" fill="%23586F7C" opacity="0.4"/><circle cx="60" cy="80" r="2" fill="%23D6D6D6" opacity="0.3"/></svg>');
             animation: float 20s ease-in-out infinite;
         }
 
@@ -72,8 +70,8 @@
             height: 150px;
             border-radius: 50%;
             margin: 0 auto 20px;
-            border: 5px solid var(--mint-green-dark);
-            box-shadow: 0 10px 30px rgba(92, 84, 112, 0.3);
+            border: 5px solid var(--accent-primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             animation: pulse 3s ease-in-out infinite;
             background-image: url('https://i.imgur.com/yJVrKom.jpeg');
             background-size: cover;
@@ -88,8 +86,9 @@
         h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
             animation: fadeInUp 1s ease-out;
+            color: var(--text-primary);
         }
 
         .subtitle {
@@ -97,29 +96,63 @@
             margin-bottom: 20px;
             opacity: 0.9;
             animation: fadeInUp 1s ease-out 0.3s both;
+            color: var(--text-secondary);
+        }
+        
+        .contact-info a {
+            text-decoration: none;
+            color: inherit;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
             margin-top: 20px;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .contact-item {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(245, 245, 245, 0.1);
             padding: 10px 20px;
             border-radius: 25px;
             backdrop-filter: blur(10px);
-            transition: transform 0.3s ease;
-            border: 2px solid var(--cotton-candy-pink-dark);
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-primary);
+            display: flex;
+            align-items: center;
+            color: var(--text-primary);
         }
 
         .contact-item:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(245, 245, 245, 0.2);
+            border-color: var(--text-primary);
+        }
+        
+        .cv-button-container {
+             margin-top: 30px;
+             text-align: center;
+        }
+
+        .cv-button {
+            background: var(--accent-primary);
+            color: var(--text-primary);
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--deep-lilac);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .cv-button:hover {
+            background: var(--bg-secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         @keyframes fadeInUp {
@@ -135,13 +168,13 @@
 
         /* Navigation */
         nav {
-            background: rgba(92, 84, 112, 0.9);
+            background: rgba(30, 31, 63, 0.8);
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .nav-links {
@@ -152,7 +185,7 @@
         }
 
         .nav-links a {
-            color: var(--text-light);
+            color: var(--text-primary);
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 20px;
@@ -161,26 +194,27 @@
         }
 
         .nav-links a:hover, .nav-links a.active {
-            background: var(--cotton-candy-pink);
-            color: var(--text-dark);
+            background: var(--accent-primary);
+            color: var(--text-primary);
             transform: translateY(-2px);
         }
 
         /* Sections */
         section {
-            padding: 60px 30px; /* Added horizontal padding */
+            padding: 60px 30px;
             margin: 40px 0;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(88, 111, 124, 0.15);
             border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(92, 84, 112, 0.1);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(88, 111, 124, 0.3);
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 40px;
-            color: var(--text-dark);
+            color: var(--text-primary);
             position: relative;
         }
 
@@ -192,7 +226,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, var(--cotton-candy-pink), var(--mint-green));
+            background: linear-gradient(90deg, var(--accent-primary), var(--bg-secondary));
             border-radius: 2px;
         }
 
@@ -203,9 +237,9 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 30px;
-            background: rgba(253, 253, 150, 0.3);
+            background: transparent;
             border-radius: 15px;
-            border: 2px solid var(--pastel-yellow-dark);
+            border: 2px solid var(--accent-primary);
         }
 
         /* Education */
@@ -216,12 +250,12 @@
             transition: transform 0.3s ease;
         }
         .education-item:nth-child(odd) {
-             background: rgba(182, 226, 211, 0.4); /* Mint Green */
-             border-left: 5px solid var(--mint-green-dark);
+             background: rgba(123, 109, 141, 0.2); 
+             border-left: 5px solid var(--accent-primary);
         }
         .education-item:nth-child(even) {
-             background: rgba(174, 223, 247, 0.4); /* Sky Blue */
-             border-left: 5px solid var(--sky-blue-dark);
+             background: rgba(88, 111, 124, 0.2); 
+             border-left: 5px solid var(--bg-secondary);
         }
 
         .education-item:hover {
@@ -232,12 +266,11 @@
             font-size: 1.3rem;
             font-weight: bold;
             margin-bottom: 10px;
-            color: var(--text-dark);
+            color: var(--text-primary);
         }
 
         .education-details {
-            color: var(--text-dark);
-            opacity: 0.8;
+            color: var(--text-secondary);
         }
 
         /* Projects */
@@ -255,38 +288,37 @@
             cursor: pointer;
         }
         
-        /* Assigning different colors to project cards */
         .project-card:nth-of-type(4n+1) {
-            background: rgba(182, 226, 211, 0.4); /* Mint Green */
-            border: 2px solid var(--mint-green-dark);
+            background: rgba(88, 111, 124, 0.25);
+            border: 2px solid var(--bg-secondary);
         }
         .project-card:nth-of-type(4n+2) {
-            background: rgba(253, 253, 150, 0.4); /* Pastel Yellow */
-            border: 2px solid var(--pastel-yellow-dark);
+            background: rgba(123, 109, 141, 0.25);
+            border: 2px solid var(--accent-primary);
         }
         .project-card:nth-of-type(4n+3) {
-            background: rgba(255, 183, 206, 0.4); /* Cotton Candy Pink */
-            border: 2px solid var(--cotton-candy-pink-dark);
+            background: rgba(88, 111, 124, 0.25);
+            border: 2px solid var(--bg-secondary);
         }
         .project-card:nth-of-type(4n+4) {
-            background: rgba(195, 177, 225, 0.4); /* Lavender */
-            border: 2px solid var(--lavender-dark);
+            background: rgba(123, 109, 141, 0.25);
+            border: 2px solid var(--accent-primary);
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(92, 84, 112, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
         .project-title {
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 10px;
-            color: var(--text-dark);
+            color: var(--text-primary);
         }
 
         .project-course {
-            color: var(--cotton-candy-pink-dark);
+            color: var(--text-secondary);
             font-style: italic;
             margin-bottom: 15px;
             font-weight: bold;
@@ -295,6 +327,7 @@
         .project-description {
             font-size: 0.95rem;
             line-height: 1.6;
+            color: var(--text-secondary);
         }
 
         /* Experience */
@@ -310,7 +343,7 @@
             transform: translateX(-50%);
             width: 4px;
             height: 100%;
-            background: linear-gradient(180deg, var(--cotton-candy-pink), var(--lavender));
+            background: linear-gradient(180deg, var(--accent-primary), var(--bg-secondary));
             border-radius: 2px;
         }
 
@@ -324,22 +357,21 @@
             cursor: pointer;
         }
 
-        /* Assigning different colors to experience items */
         .experience-item:nth-of-type(4n+1) {
-            background: rgba(174, 223, 247, 0.4); /* Sky Blue */
-            border: 1px solid var(--sky-blue-dark);
+            background: rgba(88, 111, 124, 0.25);
+            border: 1px solid var(--bg-secondary);
         }
         .experience-item:nth-of-type(4n+2) {
-            background: rgba(255, 183, 206, 0.4); /* Cotton Candy Pink */
-            border: 1px solid var(--cotton-candy-pink-dark);
+            background: rgba(123, 109, 141, 0.25);
+            border: 1px solid var(--accent-primary);
         }
         .experience-item:nth-of-type(4n+3) {
-            background: rgba(253, 253, 150, 0.4); /* Pastel Yellow */
-            border: 1px solid var(--pastel-yellow-dark);
+            background: rgba(88, 111, 124, 0.25);
+            border: 1px solid var(--bg-secondary);
         }
         .experience-item:nth-of-type(4n+4) {
-            background: rgba(182, 226, 211, 0.4); /* Mint Green */
-            border: 1px solid var(--mint-green-dark);
+            background: rgba(123, 109, 141, 0.25);
+            border: 1px solid var(--accent-primary);
         }
 
         .experience-item:hover {
@@ -359,10 +391,10 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            background: var(--cotton-candy-pink);
+            background: var(--accent-primary);
             border-radius: 50%;
             top: 50%;
-            border: 3px solid var(--text-light);
+            border: 3px solid var(--text-primary);
         }
 
         .experience-item:nth-child(odd)::before {
@@ -377,18 +409,18 @@
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 10px;
-            color: var(--text-dark);
+            color: var(--text-primary);
         }
 
         .experience-org {
-            color: var(--cotton-candy-pink-dark);
+            color: var(--text-secondary);
             font-weight: bold;
             font-style: italic;
             margin-bottom: 15px;
         }
 
         .experience-date {
-            color: var(--lavender-dark);
+            color: var(--moon-silver);
             font-size: 0.9rem;
             margin-bottom: 15px;
         }
@@ -411,28 +443,23 @@
             max-width: 400px;
         }
         
-        /* Assigning different colors to skill categories */
         .skill-category:nth-of-type(1) {
-            background: rgba(255, 183, 206, 0.4); /* Cotton Candy Pink */
-            border: 2px solid var(--cotton-candy-pink-dark);
+            background: rgba(123, 109, 141, 0.25);
+            border: 2px solid var(--accent-primary);
         }
         .skill-category:nth-of-type(2) {
-            background: rgba(174, 223, 247, 0.4); /* Sky Blue */
-            border: 2px solid var(--sky-blue-dark);
+            background: rgba(88, 111, 124, 0.25);
+            border: 2px solid var(--bg-secondary);
         }
         .skill-category:nth-of-type(3) {
-            background: rgba(182, 226, 211, 0.4); /* Mint Green */
-            border: 2px solid var(--mint-green-dark);
-        }
-        .skill-category:nth-of-type(4) {
-            background: rgba(253, 253, 150, 0.4); /* Pastel Yellow */
-            border: 2px solid var(--pastel-yellow-dark);
+            background: rgba(123, 109, 141, 0.25);
+            border: 2px solid var(--accent-primary);
         }
 
         .skill-category h3 {
             font-size: 1.3rem;
             margin-bottom: 20px;
-            color: var(--text-dark);
+            color: var(--text-primary);
         }
 
         .skill-tags {
@@ -443,24 +470,24 @@
         }
 
         .skill-tag {
-            background: var(--mint-green);
-            color: var(--text-dark);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.9rem;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             font-weight: 500;
         }
 
         .skill-tag:hover {
             transform: scale(1.1);
-            background: var(--cotton-candy-pink);
+            background: var(--accent-primary);
         }
 
         /* Footer */
         footer {
-            background: var(--text-dark);
-            color: var(--pastel-yellow);
+            background: #151633;
+            color: var(--text-secondary);
             text-align: center;
             padding: 40px 0;
             margin-top: 60px;
@@ -512,14 +539,14 @@
             }
             
             section {
-                padding: 40px 15px; /* Adjust padding for smaller screens */
+                padding: 40px 15px;
             }
         }
         
         /* Gallery Styles */
         .gallery-subtitle {
             font-size: 1.8rem;
-            color: var(--text-dark);
+            color: var(--text-primary);
             margin-bottom: 30px;
             text-align: center;
             position: relative;
@@ -533,21 +560,17 @@
             transform: translateX(-50%);
             width: 60px;
             height: 2px;
-            background: var(--cotton-candy-pink);
+            background: var(--accent-primary);
             border-radius: 1px;
         }
 
-        .profile-gallery, .project-gallery, .activities-gallery {
+        .project-gallery, .activities-gallery {
             margin-bottom: 60px;
         }
 
-        .profile-photos-grid, .project-images-grid, .activities-masonry {
+        .project-images-grid, .activities-masonry {
             display: grid;
             gap: 30px;
-        }
-        
-        .profile-photos-grid {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
         
         .project-images-grid {
@@ -558,35 +581,34 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
 
-        .profile-photo-item, .project-image-item, .activity-item {
+        .project-image-item, .activity-item {
             position: relative;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(92, 84, 112, 0.2);
-            transition: transform 0.3s ease;
-            scroll-margin-top: 100px; /* Offset for sticky nav */
-            border: 4px solid var(--lavender-dark); /* Added border */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            scroll-margin-top: 100px;
+            border: 4px solid var(--accent-primary);
         }
 
-        .profile-photo-item:hover, .project-image-item:hover, .activity-item:hover {
+        .project-image-item:hover, .activity-item:hover {
             transform: translateY(-10px);
-            border-color: var(--cotton-candy-pink-dark); /* Change border color on hover */
+            border-color: var(--text-primary);
         }
 
-        .profile-photo-item img, .project-image-item img, .activity-item img {
+        .project-image-item img, .activity-item img {
             width: 100%;
             object-fit: cover; 
             display: block;
             transition: transform 0.3s ease;
         }
         
-        .profile-photo-item img { height: 300px; }
         .project-image-item img { height: 250px; }
         .activity-item img { 
             height: 350px; 
         }
 
-        .profile-photo-item:hover img, .project-image-item:hover img, .activity-item:hover img {
+        .project-image-item:hover img, .activity-item:hover img {
             transform: scale(1.1);
         }
 
@@ -595,14 +617,14 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(92, 84, 112, 0.8));
+            background: linear-gradient(transparent, rgba(30, 31, 63, 0.9));
             color: white;
             padding: 20px;
             transform: translateY(100%);
             transition: transform 0.3s ease;
         }
         
-        .profile-photo-item:hover .photo-overlay, .project-image-item:hover .project-overlay, .activity-item:hover .activity-overlay {
+        .project-image-item:hover .project-overlay, .activity-item:hover .activity-overlay {
             transform: translateY(0);
         }
 
@@ -618,7 +640,7 @@
 
         /* Mobile Responsive for Gallery */
         @media (max-width: 768px) {
-            .profile-photos-grid, .project-images-grid, .activities-masonry {
+            .project-images-grid, .activities-masonry {
                 grid-template-columns: 1fr;
             }
             .gallery-subtitle {
@@ -635,9 +657,18 @@
             <h1>Nur Lintang Enjang Kinasih</h1>
             <p class="subtitle">Informatics Engineering Student | Tech Enthusiast | Leader</p>
             <div class="contact-info">
-                <div class="contact-item">📧 nurlintang972@gmail.com</div>
-                <div class="contact-item">📱 +62 821 8222 9663</div>
-                <div class="contact-item">📍 Surabaya, Jawa Timur</div>
+                <a href="mailto:nurliintaang14@gmail.com">
+                    <div class="contact-item">📧 nurliintaang14@gmail.com</div>
+                </a>
+                <a href="tel:+6282182229663">
+                    <div class="contact-item">📱 +62 821 8222 9663</div>
+                </a>
+                <a href="https://www.linkedin.com/in/nur-lintang-enjang-kinasih-50a791373/" target="_blank">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </div>
+                </a>
             </div>
         </div>
     </header>
@@ -659,7 +690,10 @@
         <section id="about">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p>I am Nur Lintang Enjang Kinasih, a fifth-semester Informatics Engineering student at Universitas Negeri Surabaya with a strong interest in organizational development and technology. Passionate about continuous learning, I combine technical proficiency with creativity to grow personally and professionally. I aim to contribute meaningfully through every role, project, or collaboration I take part in.</p>
+                <p>I am Nur Lintang Enjang Kinasih, an Informatics Engineering student at Universitas Negeri Surabaya with a strong interest in organizational development and technology. Passionate about continuous learning, I combine technical proficiency with creativity to grow personally and professionally. I aim to contribute meaningfully through every role, project, or collaboration I take part in.</p>
+            </div>
+            <div class="cv-button-container">
+                <a href="images/CV_Nur Lintang Enjang Kinasih.pdf" target="_blank" class="cv-button">Here's My CV</a>
             </div>
         </section>
 
@@ -866,7 +900,7 @@
         </section>
 
         <section id="skills">
-            <h2 class="section-title">Skills & Achievements</h2>
+            <h2 class="section-title">Skills</h2>
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>💡 Soft Skills</h3>
@@ -902,13 +936,6 @@
                         <span class="skill-tag">English (Intermediate)</span>
                     </div>
                 </div>
-
-                <div class="skill-category">
-                    <h3>🏆 Achievements</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Samsung Innovation Campus Batch 6 Mentee</span>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -919,56 +946,56 @@
                 <h3 class="gallery-subtitle">Project Showcase</h3>
                 <div class="project-images-grid">
                     <div class="project-image-item" id="gallery-codemate">
-                        <img src="images/CodeMate.png" alt="CodeMate App" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFB7CE/5C5470?text=CodeMate';">
+                        <img src="images/CodeMate.png" alt="CodeMate App" onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=CodeMate';">
                         <div class="project-overlay">
                             <h4>CodeMate App</h4>
                             <p>Mobile app built with Flutter</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-ai-music">
-                        <img src="images/AIMOOD.png" alt="AI Music Player" onerror="this.onerror=null;this.src='https://placehold.co/600x400/AEDFF7/5C5470?text=AI+Music';">
+                        <img src="images/AIMOOD.png" alt="AI Music Player" onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=AI+Music';">
                         <div class="project-overlay">
                             <h4>AI Music Player</h4>
                             <p>Emotion-based music recommendation</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-iot">
-                        <img src="images/Pink Playful Fun Doodle Friends Photo Collage Instagram Post  (4).png" alt="IoT Project" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FDFD96/5C5470?text=IoT';">
+                        <img src="images/Pink Playful Fun Doodle Friends Photo Collage Instagram Post  (4).png" alt="IoT Project" onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=IoT';">
                         <div class="project-overlay">
                             <h4>IoT Project</h4>
                             <p>ESP32 with AI decision making</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-gratieats">
-                        <img src="images/RDK.png" alt="GratiEats" onerror="this.onerror=null;this.src='https://placehold.co/600x400/B6E2D3/5C5470?text=GratiEats';">
+                        <img src="images/RDK.png" alt="GratiEats" onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=GratiEats';">
                         <div class="project-overlay">
                             <h4>GratiEats</h4>
                             <p>Sustainable food distribution app</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-therapease">
-                        <img src="images/THERAPEASE.png" alt="TherapEase" onerror="this.onerror=null;this.src='https://placehold.co/600x400/C3B1E1/5C5470?text=TherapEase';">
+                        <img src="images/THERAPEASE.png" alt="TherapEase" onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=TherapEase';">
                         <div class="project-overlay">
                             <h4>TherapEase</h4>
                             <p>Digital therapy app for autism</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-papay">
-                        <img src="images/PAPAY.png" alt="Papay App" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFB7CE/5C5470?text=Papay';">
+                        <img src="images/PAPAY.png" alt="Papay App" onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=Papay';">
                         <div class="project-overlay">
                             <h4>Papay App</h4>
                             <p>Digital payment UI/UX design</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-sekat">
-                        <img src="images/SEKAT.png" alt="SEKAT System" onerror="this.onerror=null;this.src='https://placehold.co/600x400/AEDFF7/5C5470?text=SEKAT';">
+                        <img src="images/SEKAT.png" alt="SEKAT System" onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=SEKAT';">
                         <div class="project-overlay">
                             <h4>SEKAT System</h4>
                             <p>Public health system UX design</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-techfest">
-                        <img src="images/SERVISKU.png" alt="TechFest UI/UX" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FDFD96/5C5470?text=TechFest';">
+                        <img src="images/SERVISKU.png" alt="TechFest UI/UX" onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=TechFest';">
                         <div class="project-overlay">
                             <h4>TechFest UI/UX</h4>
                             <p>Public service website prototype</p>
@@ -981,63 +1008,63 @@
                 <h3 class="gallery-subtitle">Activities & Events</h3>
                 <div class="activities-masonry">
                     <div class="activity-item" id="gallery-psdm-head">
-                        <img src="images/PSDM25.png" alt="Head of PSDM" onerror="this.onerror=null;this.src='https://placehold.co/400x500/B6E2D3/5C5470?text=Head+of+PSDM';">
+                        <img src="images/PSDM25.png" alt="Head of PSDM" onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=Head+of+PSDM';">
                         <div class="activity-overlay">
                             <h4>Head of PSDM</h4>
                             <p>Leading student development programs</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-gdgoc">
-                        <img src="images/GDG.png" alt="GDGOC Event" onerror="this.onerror=null;this.src='https://placehold.co/400x500/AEDFF7/5C5470?text=GDGOC';">
+                        <img src="images/GDG.png" alt="GDGOC Event" onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=GDGOC';">
                         <div class="activity-overlay">
                             <h4>GDGOC Event</h4>
                             <p>AI × Business Discussion</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-ibc">
-                        <img src="images/IBC.png" alt="Informatics Big Camp" onerror="this.onerror=null;this.src='https://placehold.co/400x500/FDFD96/5C5470?text=IBC';">
+                        <img src="images/IBC.png" alt="Informatics Big Camp" onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=IBC';">
                         <div class="activity-overlay">
                             <h4>Informatics Big Camp</h4>
                             <p>Organizing internal competitions</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-lkmm">
-                        <img src="images/LKMM PRA-TD.png" alt="Leadership Training" onerror="this.onerror=null;this.src='https://placehold.co/400x500/B6E2D3/5C5470?text=LKMM';">
+                        <img src="images/LKMM PRA-TD.png" alt="Leadership Training" onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=LKMM';">
                         <div class="activity-overlay">
                             <h4>Leadership Training</h4>
                             <p>LKMM Pra-TD Informatika</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-tecno-symphony">
-                        <img src="images/TS.png" alt="Tecno Symphony" onerror="this.onerror=null;this.src='https://placehold.co/400x500/C3B1E1/5C5470?text=Tecno+Symphony';">
+                        <img src="images/TS.png" alt="Tecno Symphony" onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=Tecno+Symphony';">
                         <div class="activity-overlay">
                             <h4>Tecno Symphony</h4>
                             <p>Master of Ceremony</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-bootcamp">
-                        <img src="images/BOOTCAMP.png" alt="Bootcamp" onerror="this.onerror=null;this.src='https://placehold.co/400x500/FFB7CE/5C5470?text=Bootcamp';">
+                        <img src="images/BOOTCAMP.png" alt="Bootcamp" onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=Bootcamp';">
                         <div class="activity-overlay">
                             <h4>Fullstack Bootcamp</h4>
                             <p>Moderating technical sessions</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-logicodix">
-                        <img src="images/LOGICODIX.png" alt="Programming Competition" onerror="this.onerror=null;this.src='https://placehold.co/400x500/AEDFF7/5C5470?text=Logicodix';">
+                        <img src="images/LOGICODIX.png" alt="Programming Competition" onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=Logicodix';">
                         <div class="activity-overlay">
                             <h4>Programming Competition</h4>
                             <p>LOGICODIX National Event</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-orientation">
-                        <img src="images/KORLAP.png" alt="Orientation" onerror="this.onerror=null;this.src='https://placehold.co/400x500/FDFD96/5C5470?text=Orientation';">
+                        <img src="images/KORLAP.png" alt="Orientation" onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=Orientation';">
                         <div class="activity-overlay">
                             <h4>Student Orientation</h4>
                             <p>Field Coordinator</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-psdm-staff">
-                        <img src="images/STAFF PSDM.png" alt="PSDM Staff" onerror="this.onerror=null;this.src='https://placehold.co/400x500/B6E2D3/5C5470?text=PSDM+Staff';">
+                        <img src="images/STAFF PSDM.png" alt="PSDM Staff" onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=PSDM+Staff';">
                         <div class="activity-overlay">
                             <h4>PSDM Staff</h4>
                             <p>Supporting student development</p>
