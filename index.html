@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +13,12 @@
         }
 
         :root {
-            /* 🌙 Moody Twilight Palette */
             --midnight-navy: #1E1F3F;
             --dusty-blue: #586F7C;
             --deep-lilac: #7B6D8D;
             --moon-silver: #D6D6D6;
             --soft-white: #F5F5F5;
-            
-            /* Semantic mapping */
+
             --bg-primary: var(--midnight-navy);
             --bg-secondary: var(--dusty-blue);
             --accent-primary: var(--deep-lilac);
@@ -28,7 +27,7 @@
         }
 
         body {
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
             background: var(--bg-primary);
@@ -41,7 +40,6 @@
             padding: 0 20px;
         }
 
-        /* Header */
         header {
             background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--accent-primary) 100%);
             padding: 80px 0;
@@ -61,8 +59,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .profile-img {
@@ -79,14 +84,21 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             animation: fadeInUp 1s ease-out;
             color: var(--text-primary);
         }
@@ -98,7 +110,7 @@
             animation: fadeInUp 1s ease-out 0.3s both;
             color: var(--text-secondary);
         }
-        
+
         .contact-info a {
             text-decoration: none;
             color: inherit;
@@ -130,10 +142,10 @@
             background: rgba(245, 245, 245, 0.2);
             border-color: var(--text-primary);
         }
-        
+
         .cv-button-container {
-             margin-top: 30px;
-             text-align: center;
+            margin-top: 30px;
+            text-align: center;
         }
 
         .cv-button {
@@ -152,7 +164,7 @@
         .cv-button:hover {
             background: var(--bg-secondary);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         @keyframes fadeInUp {
@@ -160,13 +172,13 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        /* Navigation */
         nav {
             background: rgba(30, 31, 63, 0.8);
             padding: 15px 0;
@@ -174,7 +186,7 @@
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .nav-links {
@@ -193,13 +205,13 @@
             font-weight: 500;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             background: var(--accent-primary);
             color: var(--text-primary);
             transform: translateY(-2px);
         }
 
-        /* Sections */
         section {
             padding: 60px 30px;
             margin: 40px 0;
@@ -230,7 +242,6 @@
             border-radius: 2px;
         }
 
-        /* About */
         .about-content {
             text-align: center;
             font-size: 1.1rem;
@@ -242,20 +253,21 @@
             border: 2px solid var(--accent-primary);
         }
 
-        /* Education */
         .education-item {
             padding: 30px;
             margin: 20px 0;
             border-radius: 15px;
             transition: transform 0.3s ease;
         }
+
         .education-item:nth-child(odd) {
-             background: rgba(123, 109, 141, 0.2); 
-             border-left: 5px solid var(--accent-primary);
+            background: rgba(123, 109, 141, 0.2);
+            border-left: 5px solid var(--accent-primary);
         }
+
         .education-item:nth-child(even) {
-             background: rgba(88, 111, 124, 0.2); 
-             border-left: 5px solid var(--bg-secondary);
+            background: rgba(88, 111, 124, 0.2);
+            border-left: 5px solid var(--bg-secondary);
         }
 
         .education-item:hover {
@@ -273,7 +285,6 @@
             color: var(--text-secondary);
         }
 
-        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -287,19 +298,22 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        
+
         .project-card:nth-of-type(4n+1) {
             background: rgba(88, 111, 124, 0.25);
             border: 2px solid var(--bg-secondary);
         }
+
         .project-card:nth-of-type(4n+2) {
             background: rgba(123, 109, 141, 0.25);
             border: 2px solid var(--accent-primary);
         }
+
         .project-card:nth-of-type(4n+3) {
             background: rgba(88, 111, 124, 0.25);
             border: 2px solid var(--bg-secondary);
         }
+
         .project-card:nth-of-type(4n+4) {
             background: rgba(123, 109, 141, 0.25);
             border: 2px solid var(--accent-primary);
@@ -330,7 +344,6 @@
             color: var(--text-secondary);
         }
 
-        /* Experience */
         .experience-timeline {
             position: relative;
             margin-top: 40px;
@@ -361,14 +374,17 @@
             background: rgba(88, 111, 124, 0.25);
             border: 1px solid var(--bg-secondary);
         }
+
         .experience-item:nth-of-type(4n+2) {
             background: rgba(123, 109, 141, 0.25);
             border: 1px solid var(--accent-primary);
         }
+
         .experience-item:nth-of-type(4n+3) {
             background: rgba(88, 111, 124, 0.25);
             border: 1px solid var(--bg-secondary);
         }
+
         .experience-item:nth-of-type(4n+4) {
             background: rgba(123, 109, 141, 0.25);
             border: 1px solid var(--accent-primary);
@@ -442,15 +458,17 @@
             flex-grow: 1;
             max-width: 400px;
         }
-        
+
         .skill-category:nth-of-type(1) {
             background: rgba(123, 109, 141, 0.25);
             border: 2px solid var(--accent-primary);
         }
+
         .skill-category:nth-of-type(2) {
             background: rgba(88, 111, 124, 0.25);
             border: 2px solid var(--bg-secondary);
         }
+
         .skill-category:nth-of-type(3) {
             background: rgba(123, 109, 141, 0.25);
             border: 2px solid var(--accent-primary);
@@ -537,13 +555,12 @@
             .skills-container {
                 flex-direction: column;
             }
-            
+
             section {
                 padding: 40px 15px;
             }
         }
-        
-        /* Gallery Styles */
+
         .gallery-subtitle {
             font-size: 1.8rem;
             color: var(--text-primary);
@@ -564,24 +581,27 @@
             border-radius: 1px;
         }
 
-        .project-gallery, .activities-gallery {
+        .project-gallery,
+        .activities-gallery {
             margin-bottom: 60px;
         }
 
-        .project-images-grid, .activities-masonry {
+        .project-images-grid,
+        .activities-masonry {
             display: grid;
             gap: 30px;
         }
-        
+
         .project-images-grid {
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         }
-        
+
         .activities-masonry {
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
 
-        .project-image-item, .activity-item {
+        .project-image-item,
+        .activity-item {
             position: relative;
             border-radius: 15px;
             overflow: hidden;
@@ -591,28 +611,36 @@
             border: 4px solid var(--accent-primary);
         }
 
-        .project-image-item:hover, .activity-item:hover {
+        .project-image-item:hover,
+        .activity-item:hover {
             transform: translateY(-10px);
             border-color: var(--text-primary);
         }
 
-        .project-image-item img, .activity-item img {
+        .project-image-item img,
+        .activity-item img {
             width: 100%;
-            object-fit: cover; 
+            object-fit: cover;
             display: block;
             transition: transform 0.3s ease;
         }
-        
-        .project-image-item img { height: 250px; }
-        .activity-item img { 
-            height: 350px; 
+
+        .project-image-item img {
+            height: 250px;
         }
 
-        .project-image-item:hover img, .activity-item:hover img {
+        .activity-item img {
+            height: 350px;
+        }
+
+        .project-image-item:hover img,
+        .activity-item:hover img {
             transform: scale(1.1);
         }
 
-        .photo-overlay, .project-overlay, .activity-overlay {
+        .photo-overlay,
+        .project-overlay,
+        .activity-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -623,32 +651,38 @@
             transform: translateY(100%);
             transition: transform 0.3s ease;
         }
-        
-        .project-image-item:hover .project-overlay, .activity-item:hover .activity-overlay {
+
+        .project-image-item:hover .project-overlay,
+        .activity-item:hover .activity-overlay {
             transform: translateY(0);
         }
 
-        .project-overlay h4, .activity-overlay h4 {
+        .project-overlay h4,
+        .activity-overlay h4 {
             font-size: 1.1rem;
             margin-bottom: 5px;
         }
 
-        .project-overlay p, .activity-overlay p {
+        .project-overlay p,
+        .activity-overlay p {
             font-size: 0.9rem;
             opacity: 0.9;
         }
 
-        /* Mobile Responsive for Gallery */
         @media (max-width: 768px) {
-            .project-images-grid, .activities-masonry {
+
+            .project-images-grid,
+            .activities-masonry {
                 grid-template-columns: 1fr;
             }
+
             .gallery-subtitle {
                 font-size: 1.5rem;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-bg"></div>
@@ -665,9 +699,23 @@
                 </a>
                 <a href="https://www.linkedin.com/in/nur-lintang-e/" target="_blank">
                     <div class="contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor" style="margin-right: 8px;">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
                         LinkedIn
                     </div>
+                </a>
+                <a href="https://github.com/kein20" target="_blank"
+                    style="text-decoration: none; color: #333; margin-right: 15px;">
+                    <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32"
+                        data-view-component="true">
+                        <path
+                            d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.19.01-.82.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21-.15.46-.55.38A8.013 8.013 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                        </path>
+                    </svg>
+                    <span>kein20</span>
                 </a>
             </div>
         </div>
@@ -690,7 +738,10 @@
         <section id="about">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p>I am Nur Lintang Enjang Kinasih, an Informatics Engineering student at Universitas Negeri Surabaya with a strong interest in organizational development and technology. Passionate about continuous learning, I combine technical proficiency with creativity to grow personally and professionally. I aim to contribute meaningfully through every role, project, or collaboration I take part in.</p>
+                <p>I am Nur Lintang Enjang Kinasih, a tech enthusiast
+                    with a strong interest in organizational development and technology. Passionate about continuous
+                    learning, I combine technical proficiency with creativity to grow personally and professionally. I
+                    aim to contribute meaningfully through every role, project, or collaboration I take part in.</p>
             </div>
             <div class="cv-button-container">
                 <a href="images/CV - NUR LINTANG ENJANG KINASIH.pdf" target="_blank" class="cv-button">Here's My CV</a>
@@ -725,7 +776,9 @@
                     <div class="project-title">Mobile Application Development Project</div>
                     <div class="project-course">Course: Pemrograman Berbasis Platform</div>
                     <div class="project-description">
-                        <p>I developed 'CodeMate,' a responsive mobile application using Flutter and Dart. The app integrates the YouTube API to display real-time educational content, all within a user-friendly interface designed with strong UI/UX principles.</p>
+                        <p>I developed 'CodeMate,' a responsive mobile application using Flutter and Dart. The app
+                            integrates the YouTube API to display real-time educational content, all within a
+                            user-friendly interface designed with strong UI/UX principles.</p>
                     </div>
                 </div>
 
@@ -733,7 +786,10 @@
                     <div class="project-title">AI Mood-Based Music Player</div>
                     <div class="project-course">Course: Rekayasa Perangkat Lunak</div>
                     <div class="project-description">
-                        <p>As a team in this project, we built an AI-powered web application that recommends music based on a user's mood, detected via webcam through facial expression analysis using the DeepFace library. The backend, built with Python and Flask, leverages the Gemini API to provide suitable music recommendations through a clean interface.</p>
+                        <p>As a team in this project, we built an AI-powered web application that recommends music based
+                            on a user's mood, detected via webcam through facial expression analysis using the DeepFace
+                            library. The backend, built with Python and Flask, leverages the Gemini API to provide
+                            suitable music recommendations through a clean interface.</p>
                     </div>
                 </div>
 
@@ -741,15 +797,21 @@
                     <div class="project-title">IoT & AI Mini Project</div>
                     <div class="project-course">Samsung Innovation Campus Batch</div>
                     <div class="project-description">
-                        <p>As part of the Samsung Innovation Campus, I created an IoT prototype simulating an ESP32 on Wokwi with MQTT for communication. This project involved implementing basic AI for decision-making from sensor data, strengthening my understanding of hardware-software integration.</p>
+                        <p>As part of the Samsung Innovation Campus, I created an IoT prototype simulating an ESP32 on
+                            Wokwi with MQTT for communication. This project involved implementing basic AI for
+                            decision-making from sensor data, strengthening my understanding of hardware-software
+                            integration.</p>
                     </div>
                 </div>
-                
+
                 <div class="project-card" onclick="scrollToElement('gallery-gratieats')">
                     <div class="project-title">Sustainability Business Plan - GratiEats</div>
                     <div class="project-course">RDK UGM 1446 H Competition</div>
                     <div class="project-description">
-                        <p>For a competition, my team and I developed 'GratiEats,' a technology-based business plan to support the government's free nutritious meal program. The concept focused on ensuring transparent food distribution and nutritional monitoring by integrating OpenStreetMap, cloud computing, and blockchain.</p>
+                        <p>For a competition, my team and I developed 'GratiEats,' a technology-based business plan to
+                            support the government's free nutritious meal program. The concept focused on ensuring
+                            transparent food distribution and nutritional monitoring by integrating OpenStreetMap, cloud
+                            computing, and blockchain.</p>
                     </div>
                 </div>
 
@@ -757,7 +819,10 @@
                     <div class="project-title">TherapEase - Digital Therapy App</div>
                     <div class="project-course">EcoFair Carnaval 2024 Competition</div>
                     <div class="project-description">
-                        <p>Our team designed 'TherapEase,' a concept for a digital therapy app aimed at providing accessible health solutions for individuals with autism. The app was designed to offer personalized therapy sessions and emotion tracking by leveraging AI, NLP, Speech Emotion Recognition (SER), and blockchain.</p>
+                        <p>Our team designed 'TherapEase,' a concept for a digital therapy app aimed at providing
+                            accessible health solutions for individuals with autism. The app was designed to offer
+                            personalized therapy sessions and emotion tracking by leveraging AI, NLP, Speech Emotion
+                            Recognition (SER), and blockchain.</p>
                     </div>
                 </div>
 
@@ -765,23 +830,32 @@
                     <div class="project-title">UI/UX Prototype - Papay</div>
                     <div class="project-course">Course: Interaksi Manusia dan Komputer</div>
                     <div class="project-description">
-                        <p>I collaborated with a team to designed 'Papay,' a high-fidelity prototype for a mobile application focused on digital payments and currency exchange. Applying key Human-Computer Interaction (HCI) principles, the process involved user research, wireframing, UI design in Figma, and building the final interactive prototype.</p>
+                        <p>I collaborated with a team to designed 'Papay,' a high-fidelity prototype for a mobile
+                            application focused on digital payments and currency exchange. Applying key Human-Computer
+                            Interaction (HCI) principles, the process involved user research, wireframing, UI design in
+                            Figma, and building the final interactive prototype.</p>
                     </div>
                 </div>
-                
+
                 <div class="project-card" onclick="scrollToElement('gallery-sekat')">
                     <div class="project-title">SEKAT - Public Health System</div>
                     <div class="project-course">GEMASTIK 2024 - User Experience Design</div>
                     <div class="project-description">
-                        <p>For the GEMASTIK 2024 competition, me and my team designed 'SEKAT,' a web-based public health system to simplify online health registration, particularly for remote communities. The design process followed the User-Centered Design (UCD) methodology, from user research to the final prototype.</p>
+                        <p>For the GEMASTIK 2024 competition, me and my team designed 'SEKAT,' a web-based public health
+                            system to simplify online health registration, particularly for remote communities. The
+                            design process followed the User-Centered Design (UCD) methodology, from user research to
+                            the final prototype.</p>
                     </div>
                 </div>
-                
+
                 <div class="project-card" onclick="scrollToElement('gallery-techfest')">
                     <div class="project-title">Public Service Website Prototype</div>
                     <div class="project-course">UI/UX Competition TechFest - BINUS</div>
                     <div class="project-description">
-                        <p>In this competition, I collaborated with a team to design a public service website prototype based on a case study. We applied Human-Centered Design principles to create a solution that was both aesthetically pleasing and highly functional, focusing on enhancing the overall user experience.</p>
+                        <p>In this competition, I collaborated with a team to design a public service website prototype
+                            based on a case study. We applied Human-Centered Design principles to create a solution that
+                            was both aesthetically pleasing and highly functional, focusing on enhancing the overall
+                            user experience.</p>
                     </div>
                 </div>
             </div>
@@ -795,7 +869,10 @@
                     <div class="experience-org">Himpunan Mahasiswa Teknik Informatika, Universitas Negeri Surabaya</div>
                     <div class="experience-date">Jan 2025 - Present</div>
                     <div class="experience-description">
-                        <p>As the Head of the Student Resources Development (PSDM) division, I lead my team in designing and executing personal development programs. My responsibilities include managing member evaluations and collaborating with other departments to organize internal training, all aimed at fostering organizational growth.</p>
+                        <p>As the Head of the Student Resources Development (PSDM) division, I lead my team in designing
+                            and executing personal development programs. My responsibilities include managing member
+                            evaluations and collaborating with other departments to organize internal training, all
+                            aimed at fostering organizational growth.</p>
                     </div>
                 </div>
 
@@ -804,34 +881,42 @@
                     <div class="experience-org">Jobfair Campus UNESA - Badan Eksekutif Mahasiswa</div>
                     <div class="experience-date">Present</div>
                     <div class="experience-description">
-                        <p>In this role, I am responsible for external communications, which involves liaising with companies to secure their participation in the job fair. I handle formal correspondence, company follow-ups, and support event branding to ensure a professional execution.</p>
+                        <p>In this role, I am responsible for external communications, which involves liaising with
+                            companies to secure their participation in the job fair. I handle formal correspondence,
+                            company follow-ups, and support event branding to ensure a professional execution.</p>
                     </div>
                 </div>
-                
+
                 <div class="experience-item" onclick="scrollToElement('gallery-tech-genius')">
                     <div class="experience-title">Event Division</div>
                     <div class="experience-org">Tech Genius - Himpunan Mahasiswa Teknik Informatika</div>
                     <div class="experience-date">Present</div>
                     <div class="experience-description">
-                        <p>As a member of the Event Division for Tech Genius, I contribute to the planning and execution of internal competitions and workshops. My role involves coordinating between divisions, preparing for guest speakers, and supporting the technical setup and promotion of our events.</p>
+                        <p>As a member of the Event Division for Tech Genius, I contribute to the planning and execution
+                            of internal competitions and workshops. My role involves coordinating between divisions,
+                            preparing for guest speakers, and supporting the technical setup and promotion of our
+                            events.</p>
                     </div>
                 </div>
-                
+
                 <div class="experience-item" onclick="scrollToElement('gallery-gdgoc')">
                     <div class="experience-title">Event Division & Moderator</div>
                     <div class="experience-org">Event Series 4 GDGOC UNESA: AI × Business</div>
                     <div class="experience-date">Jun 2025</div>
                     <div class="experience-description">
-                        <p>I contributed to concept development, coordinated with speakers, and moderated the session, ensuring an interactive and engaging webinar on AI in business.</p>
+                        <p>I contributed to concept development, coordinated with speakers, and moderated the session,
+                            ensuring an interactive and engaging webinar on AI in business.</p>
                     </div>
                 </div>
-                
+
                 <div class="experience-item" onclick="scrollToElement('gallery-ibc')">
                     <div class="experience-title">Event Division</div>
                     <div class="experience-org">Informatics Big Camp (IBC) - Himpunan Mahasiswa Teknik Informatika</div>
                     <div class="experience-date">Jun 2025</div>
                     <div class="experience-description">
-                        <p>I was part of the event division for the Informatics Big Camp, where I helped initiate and execute internal competitions and workshops. My duties included coordinating with speakers, managing pre-event preparations, and assisting with the event timeline and materials.</p>
+                        <p>I was part of the event division for the Informatics Big Camp, where I helped initiate and
+                            execute internal competitions and workshops. My duties included coordinating with speakers,
+                            managing pre-event preparations, and assisting with the event timeline and materials.</p>
                     </div>
                 </div>
 
@@ -840,34 +925,43 @@
                     <div class="experience-org">LKMM Pra-TD Informatika</div>
                     <div class="experience-date">Dec 2024</div>
                     <div class="experience-description">
-                        <p>As Chief Executive Organizer, I oversaw the end-to-end planning and execution of a leadership training event for over 630 participants. I was responsible for coordinating with speakers, partners, and all internal divisions to ensure the event successfully achieved its objectives.</p>
+                        <p>As Chief Executive Organizer, I oversaw the end-to-end planning and execution of a leadership
+                            training event for over 630 participants. I was responsible for coordinating with speakers,
+                            partners, and all internal divisions to ensure the event successfully achieved its
+                            objectives.</p>
                     </div>
                 </div>
-                
+
                 <div class="experience-item" onclick="scrollToElement('gallery-tecno-symphony')">
                     <div class="experience-title">Master of Ceremony</div>
                     <div class="experience-org">Tecno Symphony - Himpunan Mahasiswa Teknik Informatika</div>
                     <div class="experience-date">Dec 2024</div>
                     <div class="experience-description">
-                        <p>I hosted 'Tecno Symphony,' an after-party and talent showcase for new students. As MC, I was responsible for maintaining a fun and interactive atmosphere, engaging with the crowd, and ensuring smooth transitions between performers on stage.</p>
+                        <p>I hosted 'Tecno Symphony,' an after-party and talent showcase for new students. As MC, I was
+                            responsible for maintaining a fun and interactive atmosphere, engaging with the crowd, and
+                            ensuring smooth transitions between performers on stage.</p>
                     </div>
                 </div>
-                
+
                 <div class="experience-item" onclick="scrollToElement('gallery-bootcamp')">
                     <div class="experience-title">Moderator</div>
                     <div class="experience-org">Fullstack Web Development Bootcamp</div>
                     <div class="experience-date">Oct 2024</div>
                     <div class="experience-description">
-                        <p>I moderated technical sessions for a Fullstack Web Development Bootcamp, focusing on JavaScript. My role was to facilitate discussions and Q&A sessions, build rapport with the speaker, and help maintain the audience's focus and engagement.</p>
+                        <p>I moderated technical sessions for a Fullstack Web Development Bootcamp, focusing on
+                            JavaScript. My role was to facilitate discussions and Q&A sessions, build rapport with the
+                            speaker, and help maintain the audience's focus and engagement.</p>
                     </div>
                 </div>
-                
+
                 <div class="experience-item" onclick="scrollToElement('gallery-logicodix')">
                     <div class="experience-title">Master of Ceremony</div>
                     <div class="experience-org">LOGICODIX National Programming Competition</div>
                     <div class="experience-date">Oct 2024</div>
                     <div class="experience-description">
-                        <p>I served as the Master of Ceremony for LOGICODIX, a national programming competition. I guided participants through the agenda, delivered the opening and closing segments, and worked to maintain a professional and energetic atmosphere throughout the event.</p>
+                        <p>I served as the Master of Ceremony for LOGICODIX, a national programming competition. I
+                            guided participants through the agenda, delivered the opening and closing segments, and
+                            worked to maintain a professional and energetic atmosphere throughout the event.</p>
                     </div>
                 </div>
 
@@ -876,16 +970,21 @@
                     <div class="experience-org">Pengaderan Mahasiswa Baru Informatika</div>
                     <div class="experience-date">Sept 2024</div>
                     <div class="experience-description">
-                        <p>As a Field Coordinator for the new student orientation, I led on-the-ground operations for 630 new students. I coordinated my team to manage participant flow, execute logistical plans, and maintain a disciplined yet inclusive environment during all activities.</p>
+                        <p>As a Field Coordinator for the new student orientation, I led on-the-ground operations for
+                            630 new students. I coordinated my team to manage participant flow, execute logistical
+                            plans, and maintain a disciplined yet inclusive environment during all activities.</p>
                     </div>
                 </div>
-                
+
                 <div class="experience-item" onclick="scrollToElement('gallery-psdm-staff')">
                     <div class="experience-title">Staff of PSDM</div>
                     <div class="experience-org">Himpunan Mahasiswa Teknik Informatika</div>
                     <div class="experience-date">Feb 2024</div>
                     <div class="experience-description">
-                        <p>As a staff member in the Student Resources Development (PSDM) division, I assisted in organizing various programs focused on student development. My responsibilities included documenting member progress and collaborating with other divisions to support our initiatives.</p>
+                        <p>As a staff member in the Student Resources Development (PSDM) division, I assisted in
+                            organizing various programs focused on student development. My responsibilities included
+                            documenting member progress and collaborating with other divisions to support our
+                            initiatives.</p>
                     </div>
                 </div>
             </div>
@@ -933,61 +1032,70 @@
 
         <section id="gallery">
             <h2 class="section-title">Gallery</h2>
-            
+
             <div class="project-gallery">
                 <h3 class="gallery-subtitle">Project Showcase</h3>
                 <div class="project-images-grid">
                     <div class="project-image-item" id="gallery-codemate">
-                        <img src="images/CodeMate.png" alt="CodeMate App" onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=CodeMate';">
+                        <img src="images/CodeMate.png" alt="CodeMate App"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=CodeMate';">
                         <div class="project-overlay">
                             <h4>CodeMate App</h4>
                             <p>Mobile app built with Flutter</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-ai-music">
-                        <img src="images/AIMOOD.png" alt="AI Music Player" onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=AI+Music';">
+                        <img src="images/AIMOOD.png" alt="AI Music Player"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=AI+Music';">
                         <div class="project-overlay">
                             <h4>AI Music Player</h4>
                             <p>Emotion-based music recommendation</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-iot">
-                        <img src="images/Pink Playful Fun Doodle Friends Photo Collage Instagram Post  (4).png" alt="IoT Project" onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=IoT';">
+                        <img src="images/Pink Playful Fun Doodle Friends Photo Collage Instagram Post  (4).png"
+                            alt="IoT Project"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=IoT';">
                         <div class="project-overlay">
                             <h4>IoT Project</h4>
                             <p>ESP32 with AI decision making</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-gratieats">
-                        <img src="images/RDK.png" alt="GratiEats" onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=GratiEats';">
+                        <img src="images/RDK.png" alt="GratiEats"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=GratiEats';">
                         <div class="project-overlay">
                             <h4>GratiEats</h4>
                             <p>Sustainable food distribution app</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-therapease">
-                        <img src="images/THERAPEASE.png" alt="TherapEase" onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=TherapEase';">
+                        <img src="images/THERAPEASE.png" alt="TherapEase"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=TherapEase';">
                         <div class="project-overlay">
                             <h4>TherapEase</h4>
                             <p>Digital therapy app for autism</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-papay">
-                        <img src="images/PAPAY.png" alt="Papay App" onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=Papay';">
+                        <img src="images/PAPAY.png" alt="Papay App"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=Papay';">
                         <div class="project-overlay">
                             <h4>Papay App</h4>
                             <p>Digital payment UI/UX design</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-sekat">
-                        <img src="images/SEKAT.png" alt="SEKAT System" onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=SEKAT';">
+                        <img src="images/SEKAT.png" alt="SEKAT System"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/7B6D8D/F5F5F5?text=SEKAT';">
                         <div class="project-overlay">
                             <h4>SEKAT System</h4>
                             <p>Public health system UX design</p>
                         </div>
                     </div>
                     <div class="project-image-item" id="gallery-techfest">
-                        <img src="images/SERVISKU.png" alt="TechFest UI/UX" onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=TechFest';">
+                        <img src="images/SERVISKU.png" alt="TechFest UI/UX"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/586F7C/F5F5F5?text=TechFest';">
                         <div class="project-overlay">
                             <h4>TechFest UI/UX</h4>
                             <p>Public service website prototype</p>
@@ -1000,63 +1108,72 @@
                 <h3 class="gallery-subtitle">Activities & Events</h3>
                 <div class="activities-masonry">
                     <div class="activity-item" id="gallery-psdm-head">
-                        <img src="images/PSDM25.png" alt="Head of PSDM" onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=Head+of+PSDM';">
+                        <img src="images/PSDM25.png" alt="Head of PSDM"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=Head+of+PSDM';">
                         <div class="activity-overlay">
                             <h4>Head of PSDM</h4>
                             <p>Leading student development programs</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-gdgoc">
-                        <img src="images/GDG.png" alt="GDGOC Event" onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=GDGOC';">
+                        <img src="images/GDG.png" alt="GDGOC Event"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=GDGOC';">
                         <div class="activity-overlay">
                             <h4>GDGOC Event</h4>
                             <p>AI × Business Discussion</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-ibc">
-                        <img src="images/IBC.png" alt="Informatics Big Camp" onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=IBC';">
+                        <img src="images/IBC.png" alt="Informatics Big Camp"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=IBC';">
                         <div class="activity-overlay">
                             <h4>Informatics Big Camp</h4>
                             <p>Organizing internal competitions</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-lkmm">
-                        <img src="images/LKMM PRA-TD.png" alt="Leadership Training" onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=LKMM';">
+                        <img src="images/LKMM PRA-TD.png" alt="Leadership Training"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=LKMM';">
                         <div class="activity-overlay">
                             <h4>Leadership Training</h4>
                             <p>LKMM Pra-TD Informatika</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-tecno-symphony">
-                        <img src="images/TS.png" alt="Tecno Symphony" onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=Tecno+Symphony';">
+                        <img src="images/TS.png" alt="Tecno Symphony"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=Tecno+Symphony';">
                         <div class="activity-overlay">
                             <h4>Tecno Symphony</h4>
                             <p>Master of Ceremony</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-bootcamp">
-                        <img src="images/BOOTCAMP.png" alt="Bootcamp" onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=Bootcamp';">
+                        <img src="images/BOOTCAMP.png" alt="Bootcamp"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=Bootcamp';">
                         <div class="activity-overlay">
                             <h4>Fullstack Bootcamp</h4>
                             <p>Moderating technical sessions</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-logicodix">
-                        <img src="images/LOGICODIX.png" alt="Programming Competition" onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=Logicodix';">
+                        <img src="images/LOGICODIX.png" alt="Programming Competition"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=Logicodix';">
                         <div class="activity-overlay">
                             <h4>Programming Competition</h4>
                             <p>LOGICODIX National Event</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-orientation">
-                        <img src="images/KORLAP.png" alt="Orientation" onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=Orientation';">
+                        <img src="images/KORLAP.png" alt="Orientation"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/7B6D8D/F5F5F5?text=Orientation';">
                         <div class="activity-overlay">
                             <h4>Student Orientation</h4>
                             <p>Field Coordinator</p>
                         </div>
                     </div>
                     <div class="activity-item" id="gallery-psdm-staff">
-                        <img src="images/STAFF PSDM.png" alt="PSDM Staff" onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=PSDM+Staff';">
+                        <img src="images/STAFF PSDM.png" alt="PSDM Staff"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/586F7C/F5F5F5?text=PSDM+Staff';">
                         <div class="activity-overlay">
                             <h4>PSDM Staff</h4>
                             <p>Supporting student development</p>
@@ -1076,7 +1193,6 @@
     </footer>
 
     <script>
-        // Function to scroll to a specific element
         function scrollToElement(id) {
             const element = document.getElementById(id);
             if (element) {
@@ -1086,8 +1202,7 @@
                 });
             }
         }
-    
-        // Smooth scrolling for navigation links
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1096,15 +1211,14 @@
             });
         });
 
-        // Add active class to navigation on scroll
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-links a');
-            
+
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 150) { // Adjusted offset for better accuracy
+                if (pageYOffset >= sectionTop - 150) { 
                     current = section.getAttribute('id');
                 }
             });
@@ -1118,6 +1232,5 @@
         });
     </script>
 </body>
+
 </html>
-
-
